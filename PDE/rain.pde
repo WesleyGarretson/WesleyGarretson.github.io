@@ -1,7 +1,7 @@
 void setup(){
 size(500,500); 
 }
-
+/*
 int z = random(0, 20);
 
 int grav = map(z, 0, 20, 0, 0.2); 
@@ -53,4 +53,4 @@ void draw() {
 }
     }
     
-};
+};*/
