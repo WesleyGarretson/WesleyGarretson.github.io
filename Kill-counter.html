@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Animals Killed for Food Every Second </title>
+        
+        <style>
+            body {
+                background-color: rgb(192, 237, 250);
+            }
+            #passed {
+                color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+    
+    <p id="passed">It has been 0 seconds</p>
+    
+    <h2>Animals killed for food since opening this page</h2>
+<ul class="animal-kill-counter">
+  <li><span id="akc-wild_caught_fish">0</span> wild caught fish</li>
+  <li><span id="akc-chickens">0</span> chickens</li>
+  <li><span id="akc-farmed_fish">0</span> farmed fish</li>
+  <li><span id="akc-ducks">0</span> ducks</li>
+  <li><span id="akc-pigs">0</span> pigs</li>
+  <li><span id="akc-rabbits">0</span> rabbits</li>
+  <li><span id="akc-geese">0</span> geese</li>
+  <li><span id="akc-turkeys">0</span> turkeys</li>
+  <li><span id="akc-sheep">0</span> sheep</li>
+  <li><span id="akc-goats">0</span> goats</li>
+  <li><span id="akc-cattle">0</span> cattle</li>
+  <li><span id="akc-rodents">0</span> rodents</li>
+  <li><span id="akc-other_birds">0</span> pigeons and other birds</li>
+  <li><span id="akc-buffalo">0</span> buffalo</li>
+  <li><span id="akc-horses">0</span> horses</li>
+  <li><span id="akc-donkeys">0</span> donkeys and mules</li>
+  <li><span id="akc-camels">0</span> camels and other camelids</li>
+</ul>
+
+<h3>Sources</h3>
+<ul>
+  <li><a href="http://faostat3.fao.org/download/Q/QL/E">FAOSTAT [Region: <i>World + (Total)</i>, Element: <i>Producing Animals/Slaughtered</i>, Items Aggregated: <i>Meat, Total > (List)</i>, Year: <i>2013</i>]</a></li>
+  <li><a href="http://fishcount.org.uk/fish-count-estimates">Fish count estimates (fishcount.org.uk)</a></li>
+  <li><a href="http://considerveganism.com/counter/">Animal Kill Counter</a></li>
+      <li><a href="http://thevegancalculator.com/animal-slaughter/">The Vegan Calculator</a>
+  </li>
+</ul>
+
+
+    </body>
+    
+    <script>
+window.addEventListener('DOMContentLoaded',function(){
+  var updatesPerSecond = 20;
+  var animalsKilledPerYear = {
+    "wild_caught_fish": 970000000000,
+    "chickens": 61171973510,
+    "farmed_fish": 38000000000,
+    "ducks": 2887594480,
+    "pigs": 1451856889.38,
+    "rabbits": 1171578000,
+    "geese": 687147000,
+    "turkeys": 618086890,
+    "sheep": 536742256.33,
+    "goats": 438320370.99,
+    "cattle": 298799160.08,
+    "rodents": 70371000,
+    "other_birds": 59656000,
+    "buffalo": 25798819,
+    "horses": 4863367,
+    "donkeys": 3213400,
+    "camels": 3243266.03,
+  };
+
+  var secondsPerYear = 365 * 24 * 60 * 60;
+  var interval = 1000/ updatesPerSecond;
+  var count = 0, start = new Date().getTime();
+
+  function update(intervalCount) {
+    for (var subset in animalsKilledPerYear) {
+      var numKilled = animalsKilledPerYear[subset];
+      var countElement = document.getElementById("akc-" + subset);
+      if (countElement) {
+        countElement.innerHTML = Math.round(intervalCount * (numKilled/secondsPerYear) / updatesPerSecond).toLocaleString();
+      }
+    }
+  }
+
+  function selfCorrectingTimeoutInterval() {
+    update(++count);
+    window.setTimeout(selfCorrectingTimeoutInterval, interval - (new Date().getTime() - start - count * interval));
+  }
+  window.setTimeout(selfCorrectingTimeoutInterval, interval);
+});
+
+////
+// Timer
+////
+var sec =0, min=0, hour=0;
+setInterval(function(){
+	sec++;
+	if(sec==60){sec=0; min++;}
+	if(min==60){min=0; hour++;}
+	var str = 'It has been';
+	str+= hour?' ' +hour + (hour==1?' hour':' hours') + ' and':'';
+	str+= min?' ' +min+ (min==1?' minute':' minutes') + ' and':'';
+	str+= sec?' ' +sec+ (sec==1?' second':' seconds'):'';
+document.getElementById('passed').innerHTML=str;
+},1000);
+////
+// Timer Ends
+////
+</script>
+</html>
