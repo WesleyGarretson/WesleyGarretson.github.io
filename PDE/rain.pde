@@ -12,7 +12,7 @@ var xPositions = [x];
 var yPositions = [y];
 
 void setup(){
-size(400,400); 
+size(500, 500); 
 }
 
 for (var X = 0; X < 200; X++){
