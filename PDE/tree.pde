@@ -23,7 +23,7 @@ var branch = function(length){
 }; 
 
 
-void setup{
+void setup(){
 size(400,400); 
 }
 
