@@ -18,7 +18,7 @@ var branch = function(length){
             
     }
     
-    //translate(0, length); // undos translation 
+    translate(0, length); // undos translation 
 
 }; 
 
@@ -28,7 +28,7 @@ size(400,400);
 
 
 
-//translate(200, height); // puts the (0,0) coordinates on the middle bottom where the stem is
+translate(200, height); // puts the (0,0) coordinates on the middle bottom where the stem is
 
 
 
