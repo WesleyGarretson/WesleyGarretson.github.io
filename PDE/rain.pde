@@ -15,7 +15,7 @@ var yspeed = map(z, 0, 20, 1, 10);
 var xPositions = [x];
 var yPositions = [y];
 
-draw = function() {
+
 
 for (var X = 0; X < 200; X++){
     xPositions.push(random(400, X)); 
@@ -54,5 +54,3 @@ draw = function() {
     }
     
 };
-
-}; 
