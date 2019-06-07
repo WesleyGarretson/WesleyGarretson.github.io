@@ -1,4 +1,4 @@
-var z = random(0, 20);
+var z = random(0, 10);
 
 var grav = map(z, 0, 20, 0, 0.2); 
 var strokeW = map(z, 0, 20, 1, 3); 
@@ -15,7 +15,7 @@ void setup(){
 size(500, 500); 
 }
 
-for (var X = 0; X < 200; X++){
+for (var X = 0; X < 50; X++){
     xPositions.push(random(400, X)); 
     yPositions.push(random(-200, X));
 }
