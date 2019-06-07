@@ -1,7 +1,7 @@
 var length = 100; // length of each branch 
 var angle = 35; // how much each branch rotates 
 
-void branch(length){
+var branch = function(length){
     line(0, 0 , 0,-length); // base 
     translate(0, -length); // translates the tree 
     
@@ -16,7 +16,7 @@ void branch(length){
             branch(length * 0.67); // left-hand branches
             popMatrix(); // repeats branches
             
-    }
+    };
     
     translate(0, length); // undos translation 
 
@@ -24,7 +24,7 @@ void branch(length){
 
 void setup(){
 size(400,400); 
-}
+};
 
 
 
