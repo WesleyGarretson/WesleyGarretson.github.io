@@ -2,18 +2,18 @@ void setup(){
 size(500,500); 
 }
 
-var z = random(0, 20);
+int z = random(0, 20);
 
-var grav = map(z, 0, 20, 0, 0.2); 
-var strokeW = map(z, 0, 20, 1, 3); 
-var x = random(width); 
-var y = random(-200, -100); 
-var len = map(z, 0, 20, 10, 20); 
-var yspeed = map(z, 0, 20, 1, 10); 
+int grav = map(z, 0, 20, 0, 0.2); 
+int strokeW = map(z, 0, 20, 1, 3); 
+int x = random(width); 
+int y = random(-200, -100); 
+int len = map(z, 0, 20, 10, 20); 
+int yspeed = map(z, 0, 20, 1, 10); 
 
 
-var xPositions = [x];
-var yPositions = [y];
+int xPositions = [x];
+int yPositions = [y];
 
 
 
@@ -23,7 +23,7 @@ for (var X = 0; X < 200; X++){
 }
 
 
-draw = function() {
+void draw() {
     background(79, 78, 79);
     
     if (mouseIsPressed){
@@ -32,7 +32,7 @@ draw = function() {
     }
 
 
-    for (var i = 0; i < xPositions.length; i++) {
+    for (int i = 0; i < xPositions.length; i++) {
         
         stroke(14, 255, random(14, 255));
         strokeWeight(strokeW); 
