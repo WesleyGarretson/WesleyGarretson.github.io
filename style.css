@@ -53,9 +53,8 @@ li a:hover {
   z-index: 1;
 }
 
-iframe[seamless] {
-    border: none;
-}
+//iframe[seamless] {
+//    border: none;}
 
 /* Links inside the dropdown */
 .dropdown-content a {
