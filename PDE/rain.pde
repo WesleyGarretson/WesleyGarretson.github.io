@@ -27,7 +27,7 @@ draw = function() {
 
     background(79, 78, 79);
     
-    if (mouseIsPressed){
+    if (mousePressed){
         xPositions.push(mouseX); 
         yPositions.push(mouseY); 
     }
