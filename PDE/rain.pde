@@ -17,7 +17,7 @@ int yPositions = [y];
 
 
 
-for (var X = 0; X < 200; X++){
+for (int X = 0; X < 200; X++){
     xPositions.push(random(400, X)); 
     yPositions.push(random(-200, X));
 }
