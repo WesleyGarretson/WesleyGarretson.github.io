@@ -44,4 +44,6 @@ draw = function() {
     stroke(26, 0, 196); // tree's color 
     strokeWeight(2); // tree's stroke weight 
     branch(115); // length of tree 
+    fill(0, 102, 153);
+    text("update", 5, 5); 
 };
