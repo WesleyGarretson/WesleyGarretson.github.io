@@ -1,42 +1,40 @@
 
-var length = 100; // length of each branch 
-var angle = 35; // how much each branch rotates 
+// Coding Train
+// Ported to processing by Max (https://github.com/TheLastDestroyer)
+// Origional JS by Daniel Shiffman
+// http://patreon.com/codingtrain
+// Code for: https://youtu.be/0jjeOYMjmDU
+
+
+float angle = 45;
+float branch_ratio = 0.67;
+
 
 void setup(){
-size(400,400); 
-};
+  size(400,400);
+}
 
-translate(200, height); // puts the (0,0) coordinates on the middle bottom where the stem is
+void draw(){
+  background(51);
+  stroke(255);
+  translate(width/2, height);
+  branch(100);
+}
 
-var branch = function(length){
-    line(0, 0 , 0,-length); // base 
-    translate(0, -length); // translates the tree 
-    
-    if (length > 4) /* the "... > 4" stops the code from looping infinitely*/{
-            pushMatrix(); // repeats branches
-            rotate(angle); // rotates branch 
-            branch(length * 0.67); // right-hand branches
-            popMatrix(); // repeats branches 
-            
-            pushMatrix();// repeats branches
-            rotate(-angle); // rotates branch in the opposite direction 
-            branch(length * 0.67); // left-hand branches
-            popMatrix(); // repeats branches
-            
-    }
-    
-    translate(0, length); // undos translation 
-
-}; 
-
-
-
-
-void draw() {
-    background(0, 0, 0, 255); // background color 
-    stroke(26, 0, 196); // tree's color 
-    strokeWeight(2); // tree's stroke weight 
-    branch(115); // length of tree 
-    fill(255, 255, 255);
-    text("update", 200, 200); 
-};
+void branch(float len){
+  line(0,0,0,-len);
+  translate(0, -len);
+  if (len > 4){
+    pushMatrix();
+    rotate(angle);
+    branch(len * branch_ratio);
+    popMatrix();
+    pushMatrix();
+    rotate(-angle);
+    branch(len * branch_ratio);
+    popMatrix();
+  }
+}
+ void mouseWheel(MouseEvent event){
+   angle += event.getCount()/10.0;
+}
