@@ -12,6 +12,7 @@ background-image: url("Pictures/background.gif");
 #directions { 
  background-color: white; 
  width: 20%; 
+ float: right; 
 } 
 
 ul {
