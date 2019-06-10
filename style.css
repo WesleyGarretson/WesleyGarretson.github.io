@@ -5,6 +5,10 @@ body {
 background-image: url("Pictures/background.gif");  
 } 
 
+p { 
+ background-color: #c6e2ff; 
+}
+
 ul {
   list-style-type: none;
   margin: 0;
