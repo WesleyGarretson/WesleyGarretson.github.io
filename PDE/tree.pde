@@ -6,16 +6,19 @@
 // Code for: https://youtu.be/0jjeOYMjmDU
 
 
-float angle = 310;
+float angle = 0;
+float slider;
 float branch_ratio = 0.67;
 
 
 void setup(){
   size(500,500);
+  slider = createSlider(0, TWO_PI, PI / 4, 0.01);
 }
 
 void draw(){
   background(0, 0, 0, 255);
+  angle = slider.value();
   stroke(26, 0, 196);
   translate(width/2, height);
   branch(115);
