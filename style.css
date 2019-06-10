@@ -9,6 +9,10 @@ p {
  background-color: #c6e2ff; 
 }
 
+#directions { 
+ background-color: #ff4040; 
+} 
+
 ul {
   list-style-type: none;
   margin: 0;
