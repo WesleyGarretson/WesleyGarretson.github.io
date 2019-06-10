@@ -6,7 +6,7 @@
 // Code for: https://youtu.be/0jjeOYMjmDU
 
 
-float angle = 45;
+float angle = 40;
 float branch_ratio = 0.67;
 
 
