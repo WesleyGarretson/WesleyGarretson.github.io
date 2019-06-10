@@ -6,12 +6,12 @@ background-image: url("Pictures/background.gif");
 } 
 
 #main-article { 
- background-color: #c6e2ff; 
+ background-color: white; 
 }
 
 #directions { 
- background-color: #c6e2ff; 
- width: 33.33%; 
+ background-color: white; 
+ width: 20%; 
 } 
 
 ul {
