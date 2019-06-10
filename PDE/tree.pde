@@ -1,7 +1,7 @@
-float length = 100; // length of each branch 
-float angle = 35; // how much each branch rotates 
+var length = 100; // length of each branch 
+var angle = 35; // how much each branch rotates 
 
-void branch (length){
+var branch = function (length){
     line(0, 0 , 0,-length); // base 
     translate(0, -length); // translates the tree 
     
@@ -26,18 +26,7 @@ void setup(){
 size(400,400); 
 };
 
-
-
 translate(200, height); // puts the (0,0) coordinates on the middle bottom where the stem is
-
-
-
-
-
-
-
-
-
 
 void draw() {
     background(0, 0, 0, 255); // background color 
@@ -45,5 +34,5 @@ void draw() {
     strokeWeight(2); // tree's stroke weight 
     branch(115); // length of tree 
     fill(0, 102, 153);
-    text("update", 5, 5); 
+    text("update", 200, 200); 
 };
