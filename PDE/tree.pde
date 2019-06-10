@@ -37,6 +37,6 @@ void draw() {
     stroke(26, 0, 196); // tree's color 
     strokeWeight(2); // tree's stroke weight 
     branch(115); // length of tree 
-    fill(0, 102, 153);
+    fill(255, 255, 255);
     text("update", 200, 200); 
 };
