@@ -18,7 +18,7 @@ void draw(){
   background(0, 0, 0, 255);
   stroke(26, 0, 196);
   translate(width/2, height);
-  branch(200);
+  branch(150);
 }
 
 void branch(float len){
