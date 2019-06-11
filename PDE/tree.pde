@@ -6,7 +6,7 @@
 // Code for: https://youtu.be/0jjeOYMjmDU
 
 
-float angle = 3.14/3;
+float angle = 3.14/4;
 float branch_ratio = 0.67;
 
 
@@ -18,7 +18,7 @@ void draw(){
   background(0, 0, 0, 255);
   stroke(26, 0, 196);
   translate(width/2, height);
-  branch(115);
+  branch(200);
 }
 
 void branch(float len){
